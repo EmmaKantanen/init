@@ -1,0 +1,6 @@
+#!/bin/bash
+# Make the intra.42.fr address reroute to 46.19.122.85
+
+# I'd need to add this line "46.19.122.85 intra.42.fr" to the file here: /etc/hosts
+# This is, however, not possible due to the lack of rights.
+# I assume, though, that it's possible to copy the file to Desktop, modify it and copy it back where it originally was.

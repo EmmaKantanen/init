@@ -1,0 +1,128 @@
+#!/bin/bash
+# Write a script of you choice.
+# The command opening the website needs to be like this if using Linux: xdg-open https://instagram.com
+
+funnybeg=Haha! 
+funnyend=:D
+red=`tput setaf 1`
+reset=`tput sgr0`
+echo -e "Welcome to the Instagram comment generator."
+open https://instagram.com
+echo -e "${red}Is the picture ugly? If you don't have anything nice to say, don't say it at all."
+echo -e "${reset}What kind of picture are you looking at? - photo/art/animal"
+read medium
+# CONTENT: PHOTO
+if [[ $medium == "photo" ]]; then
+    echo -e "Tell me about the content. - person/architecture/nature"
+    read content
+    fi
+# PERSON
+        if [[ $content == "person" ]]; then
+            echo -e "How do you want to present yourself? - funny/professional"
+            read tone
+        fi
+            if [[ $tone == "funny" ]]; then
+                echo "\"$funnybeg This really catches their personality. $funnyend\""
+            fi
+            if [[ $tone == "professional" ]]; then
+                echo "\"This really catches their personality.\""
+            fi
+# ARCHITECTURE
+        if [[ $content == "architecture" ]]; then
+            echo -e "How do you want to present yourself? - humorous/white-collar"
+            read tone
+        fi
+            if [[ $tone == "humorous" ]]; then
+                echo "\"$funnybeg The lighting really enhances the geometry. $funnyend\""
+            fi
+            if [[ $tone == "white-collar" ]]; then
+                echo "\"The lighting really enhances the geometry.\""
+            fi
+# NATURE
+        if [[ $content == "nature" ]]; then
+            echo -e "How do you want to present yourself? - witty/serious"
+            read tone
+        fi
+            if [[ $tone == "witty" ]]; then
+                echo "\"$funnybeg Where did you take this? I might have been there! $funnyend\""
+            fi
+            if [[ $tone == "serious" ]]; then
+                echo "\"Where did you take this? I might have been there!\""
+            fi
+# CONTENT: ART
+if [[ $medium == "art" ]]; then
+    echo -e "Tell me about the content. - colorful/painting/cartoony"
+    read content
+    fi
+# COLORFUL
+        if [[ $content == "colorful" ]]; then
+            echo -e "How do you want to present yourself? - comical/firm"
+            read tone
+        fi
+            if [[ $tone == "comical" ]]; then
+                echo "\"$funnybeg I love the use of colors. $funnyend\""
+            fi
+            if [[ $tone == "firm" ]]; then
+                echo "\"I love the use of colors.\""
+            fi
+# PAINTING
+        if [[ $content == "painting" ]]; then
+            echo -e "How do you want to present yourself? - amusing/determined"
+            read tone
+        fi
+            if [[ $tone == "amusing" ]]; then
+                echo "\"$funnybeg You've achieved a really nice texture with your strokes. $funnyend\""
+            fi
+            if [[ $tone == "determined" ]]; then
+                echo "\"You've achieved a really nice texture with your strokes.\""
+            fi
+# CARTOONY
+        if [[ $content == "cartoony" ]]; then
+            echo -e "How do you want to present yourself? - jolly/dull"
+            read tone
+        fi
+            if [[ $tone == "jolly" ]]; then
+                echo "\"Haha! So expressive, you know how to exaggerate. $funnyend\""
+            fi
+            if [[ $tone == "dull" ]]; then
+                echo "\"So expressive, you know how to exaggerate.\""
+            fi
+# CONTENT: ANIMAL
+if [[ $medium == "animal" ]]; then
+    echo -e "Tell me about the content. - cute/wild/video"
+    read content
+    fi
+# CUTE
+        if [[ $content == "cute" ]]; then
+            echo -e "How do you want to present yourself? - silly/grim"
+            read tone
+        fi
+            if [[ $tone == "silly" ]]; then
+                echo "\"$funnybeg Adorable, is that your pet? $funnyend\""
+            fi
+            if [[ $tone == "grim" ]]; then
+                echo "\"Adorable, is that your pet?\""
+            fi
+# WILD
+        if [[ $content == "wild" ]]; then
+            echo -e "How do you want to present yourself? - sparkling/stern"
+            read tone
+        fi
+            if [[ $tone == "sparkling" ]]; then
+                echo "\"$funnybeg Amazing, you must have been patient to get that shot. $funnyend\""
+            fi
+            if [[ $tone == "stern" ]]; then
+                echo "\"Amazing, you must have been patient to get that shot.\""
+            fi
+# VIDEO
+        if [[ $content == "video" ]]; then
+            echo -e "How do you want to present yourself? - wacky/adult-like"
+            read tone
+        fi
+            if [[ $tone == "wacky" ]]; then
+                echo "\"$funnybeg How immersive, I can almost imagine myself standing there. $funnyend\""
+            fi
+            if [[ $tone == "adult-like" ]]; then
+                echo "\"How immersive, I can almost imagine myself standing there.\""
+            fi
+echo "You can now copy and paste your comment."

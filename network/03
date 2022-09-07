@@ -1,0 +1,5 @@
+#!/bin/bash
+# Identify the MAC address of the Wi-Fi card
+
+# First check the device by using networksetup -listallhardwareports
+ifconfig en1 | grep ether | awk '{print $2}'

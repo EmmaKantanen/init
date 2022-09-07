@@ -1,0 +1,13 @@
+#!/bin/bash
+# Identify and display the Ethernet interface characteristics:
+
+# a.) Identify broadcast address
+
+# First check the device by using networksetup -listallhardwareports
+ifconfig en0 | grep broadcast | awk '{print $6}'
+# -> 10.13.255.255
+
+# b.) Identify all IP adresses which are part of the same subnet
+
+# ping -t 1 10.13.255.255 ->
+arp -a | awk '{print $2}'

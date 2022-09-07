@@ -1,0 +1,5 @@
+#!/bin/bash
+# Find the IP that was assigned to you by dhcp server
+
+# First check the device by using networksetup -listallhardwareports
+ifconfig en0 | grep "inet " | awk '{print $2}'

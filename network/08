@@ -1,0 +1,6 @@
+#!/bin/bash
+# Find the provider of who.int
+
+# nslookup who.int -> 104.17.113.188
+# whois 104.17.113.188
+Cloudflare, Inc.

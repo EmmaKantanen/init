@@ -1,0 +1,5 @@
+#!/bin/bash
+# Explain how connect yourself as new user. (With graphic session and ssh session)
+
+# Graphic session: (Log out if needed and) login as the new user on boot and password as prompted
+# Ssh session: ssh [new_user]@[ipaddress]
